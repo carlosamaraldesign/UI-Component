@@ -1,0 +1,127 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  position: absolute;
+}
+
+.hidecontainer{
+  background: none;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.stroke {
+  stroke: rgba(255, 255, 255, 0.5);
+  stroke-dasharray: 2;
+}
+
+.buttons{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+}
+
+.circle {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+svg {
+  fill: rgba(255, 255, 255, 0);
+  stroke-width: 5%;
+  overflow: visible;
+}
+
+.knob {
+  width: 40px;
+  height: 40px;
+  background: #e5e5e5;
+  box-shadow: 2px 2px 35px 0 rgba(0, 0, 0, 0.5);
+  position: absolute;
+  border-radius: 100%;
+  top: 50%;
+  left: 50%;
+  margin-left: -222px;
+  margin-top: -22px;
+  transform: rotate(0deg);
+  transform-origin: 222px 22px;
+  z-index: 3;
+  cursor: grab;
+}
+
+.video{
+  height: 100%;
+  width: 100%;
+  z-index: 99;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+button:focus{
+  outline: none;
+}
+
+.playActive{
+  margin-top: 84px;
+  height: 150px;
+  width: 150px;
+  background-image: url(../assets/play.svg);
+  opacity: 0.5;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.pauseActive{
+  background-image: url(../assets/pause.svg);
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  opacity: 0.5;
+  }
+
+.hidden{
+  display: none;
+}
+
+.soundActive{
+  margin-top: 30px;
+  height: 64px;
+  width: 64px;
+  background-image: url(../assets/on.svg);
+  opacity: 0.5;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.muteActive{
+  background-image: url(../assets/off.svg);
+  opacity: 0.5;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
